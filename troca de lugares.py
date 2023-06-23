@@ -6,12 +6,15 @@ for i in range(qtd_alunos):
     aluno = input('')
     layout_fileira.insert(i, aluno)
 resto = len(layout_fileira) % 2
+metade_alunos = len(layout_fileira) // 2
+trocas = int(metade_alunos // 2)
+contador_pos = 1
+contador_neg = -1
+nulo = 0
+
+# Aqui o "nulo" serve apenas como conjunto de passagem para valores pares, comparando um a um com seu equidistante em relação ao meio/inicio e meio/final.
+
 if resto == 0:
-    metade_alunos = len(layout_fileira) // 2
-    trocas = int(metade_alunos // 2)
-    contador_pos = 1
-    contador_neg = -1
-    nulo = 0
     for i in range(trocas):
         nulo = layout_fileira[contador_pos]
         layout_fileira[contador_pos] = layout_fileira[contador_neg]
@@ -19,11 +22,7 @@ if resto == 0:
         contador_pos = contador_pos + 2
         contador_neg = contador_neg - 2
 else:
-    metade_alunos = len(layout_fileira)
-    trocas = int(metade_alunos // 2)
-    contador_pos = 1
     contador_neg = -2
-    nulo = 0
     for i in range(trocas):
         nulo = layout_fileira[contador_pos]
         layout_fileira[contador_pos] = layout_fileira[contador_neg]
