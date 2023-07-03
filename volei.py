@@ -23,3 +23,6 @@ percentual_ataque = (sum(ataques_certos) / sum(ataques)) * 100
 print(f'Pontos de saque: {round(percentual_saque, 2)} %')
 print(f'Pontos de bloqueio: {round(percentual_bloqueio, 2)} %')
 print(f'Pontos de ataque: {round(percentual_ataque, 2)} %')
+
+# O algoritmo pede a quantidade de jogadores a ser analisada, armazena seus dados de saques e bloqueios certos e total
+# e dá o percentual de acertos.
