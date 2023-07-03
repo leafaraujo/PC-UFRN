@@ -1,20 +1,3 @@
-
-# limite superior
-# limite inferior
-# 1º quartil (valor que se encontra na posição 1/4 do conjunto, considerando o conjunto em ordem crescente)
-# 2o quartil/mediana (valor que se encontra na metade do conjunto, considerando o conjunto em ordem crescente)
-# 3º quartil (valor que se encontra na posição 3/4 do conjunto, considerando o conjunto em ordem crescente)
-# Veja uma ilustração de Boxplot em https://www.monolitonimbus.com.br/wp-content/uploads/2019/11/boxplot_vert.png
-
-
-# A mediana é o elemento central dos dados. Há, porém, dois casos para o "centro". Se N for ímpar, haverá um único
-# "elemento do meio" (ex: em [1, 3, 5], 3 é central), mas se N for par haverá dois "elementos do meio"
-# (ex: em [1, 3, 4, 6], 3 e 4 são centrais). Nesse caso, a mediana será a média dos dois valores do meio.
-# Como os dados são informados de maneira ordenada, seus valores mínimos e máximos seriam naturalmente
-# considerados como os limites inferior e superior. Porém, o boxplot não considera valores extremos (outliers)
-# como limites. Um valor é considerado extremo se ele está afastado da mediada por mais de 1,5 o valor do intervalo
-# interquartílico (Terceiro Quartil – Primeiro Quartil).
-
 import sys
 counter_n = int(input('Qual a quantidade de valores a ser analisada?'))
 first_quartil = round((1/4) * counter_n)
@@ -69,3 +52,5 @@ print(f'Primeiro quartil: {int(dados[first_quartil - 1])}')
 print(f'A Mediana é: {int(mediana)}')
 print(f'Terceiro quartil: {int(dados[third_quartil])}')
 print(f'O limite superior é: {int(superior)}')
+
+# Criação de um boxplot que informa ao usuário os limites inferior e superios, primeiro e terceiros quartis e a mediana de uma série de valores
